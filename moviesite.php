@@ -1,13 +1,11 @@
 <html>
     <head>
-        <title>My Movie Site</title>
+        <title>My Movie Site - <?php echo $_GET['favmovie']; ?></title>
     </head>
     <body>
         <?php
-        define('FAVMOVIE', 'The Life of Brian');
-
         echo 'My favorite movie is ';
-        echo FAVMOVIE;
+        echo $_GET['favmovie'];
         echo '<br />';
 
         $movierate = 5;
