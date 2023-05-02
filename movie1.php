@@ -4,7 +4,9 @@
     </head>
     <body>
         <?php
-        echo '<a href="moviesite.php?favmovie=Stripes">';
+        $myfavmovie = urlencode('Life of Brian');
+
+        echo "<a href=\"moviesite.php?favmovie=$myfavmovie\">";
         echo 'Click here to see information about my favorite movie!';
         echo '</a>';
         ?>    
