@@ -1,11 +1,12 @@
 <?php
+setcookie('username', 'Joe', time() + 60);
 session_start();
-$_SESSION['username'] = 'Joe12345';
 $_SESSION['authuser'] = 1;
 
 //stores session variables
 
-/*session start needs to be at the top of the code when 
+/*session start and set cookie need to be at 
+the top of the code when 
 deployed on actual server*/
 ?>
 

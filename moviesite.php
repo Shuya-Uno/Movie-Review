@@ -15,7 +15,7 @@ if ($_SESSION['authuser'] != 1){
     <body>
         <?php
         echo 'Welcome to our site, ';
-        echo $_SESSION['username'];
+        echo $_COOKIE['username'];
         echo '! <br />';
         
         echo 'My favorite movie is ';
