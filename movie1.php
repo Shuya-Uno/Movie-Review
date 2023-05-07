@@ -30,6 +30,8 @@ deployed on actual server*/
         <title>Find my Favorite Movie!</title>
     </head>
     <body>
+        <?php include 'header.php'; ?>
+
         <?php
         $myfavmovie = urlencode('Life of Brian');
 

@@ -13,6 +13,8 @@ if ($_SESSION['authuser'] != 1){
         <title>My Movie Site - <?php echo $_GET['favmovie']; ?></title>
     </head>
     <body>
+        <?php include 'header.php'; ?>
+        
         <?php
         echo 'Welcome to our site, ';
         echo $_SESSION['username'];

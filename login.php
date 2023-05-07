@@ -7,6 +7,8 @@ session_unset();
         <title>Please Log In</title>
     </head>
     <body>
+        <?php include 'header.php'; ?>
+
         <form method="post" action="movie1.php">
             <p>
                 Enter your username:
