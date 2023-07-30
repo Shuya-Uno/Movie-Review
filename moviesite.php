@@ -24,21 +24,19 @@
         <?php include 'header.php'; ?>
         
         <?php
-            function listmovies_1(){
-                echo '1. Life of Brian<br />';
-                echo '2. Stripes<br />';
-                echo '3. Office Space<br />';
-                echo '4. The Holy Grail<br />';
-                echo '5. Matrix<br />';
-            }
 
-            function listmovies_2(){
-                echo '6. Terminator 2<br />';
-                echo '7. Star Trek Ⅳ<br />';
-                echo '8. Close Encounters of the Third Kind<br />';
-                echo '9. Sixteen Candles<br />';
-                echo '10. Caddyshack<br />';
-            }
+            $favmovies = array(
+                'Life of Brian',
+                'Stripes',
+                'Office Space',
+                'The Holy Grail',
+                'Matrix',
+                'Terminator 2',
+                'Star Trek Ⅳ',
+                'Close Encounters of the Third Kind',
+                'Sixteen Candles',
+                'Caddyshack'
+            );
 
             if (isset($_GET['favmovie'])){
                 echo 'Welcome to our site, ';
@@ -55,15 +53,24 @@
                 echo $movierate;
             }
             else {
-                echo 'My top ';
-                echo $_GET['movienum'];
-                echo ' movies are:';
-                echo '<br />';
 
-                listmovies_1();
-                if ($_GET['movienum'] == 10){
-                    listmovies_2();
+                echo 'My top 10 favorite movies are:<br/>';
+
+                if (isset($_GET['sorted'])){
+                    sort($favmovies);
                 }
+
+                
+                echo '<ol>';
+
+                foreach($favmovies as $movie){
+                    echo '<li>';
+                    echo $movie;
+                    echo '</li>';
+                }
+
+                echo '</ol>';
+                
             }
 
             // if & else in PHP lets a site display data depending on who the user is / user action.
